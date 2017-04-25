@@ -18,3 +18,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+/**
+ * 分类
+ */
+Route::get('category/tree/view', 'CategoryController@manageCategory');
+Route::post('add/category', ['as'=>'add.category', 'uses'=>'CategoryController@addCategory']);
